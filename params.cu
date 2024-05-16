@@ -1,9 +1,8 @@
 #include <cuda_runtime.h>
 #include "cuda.h"
 
-
-void FuncGetParam(CUfunction func, size_t paramIndex, size_t* paramOffset, size_t* paramSize)
+void StreamGetId(CUstream hStream, unsigned long long* streamId)
 {
-	cuFuncGetParamInfo(func, paramIndex, paramOffset, paramSize);
+	cuStreamGetId(hStream, streamId);
 	return;
 }
